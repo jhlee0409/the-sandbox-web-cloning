@@ -5,6 +5,11 @@ const withVanillaExtract = createVanillaExtractPlugin();
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    formats: ["image/avif", "image/webp"],
+    loader: "akamai",
+    path: "/",
+  },
 };
 
 module.exports = withVanillaExtract(nextConfig);

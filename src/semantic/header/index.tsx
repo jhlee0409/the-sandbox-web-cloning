@@ -1,24 +1,28 @@
+import Image from "next/image";
 import BalanceContainer from "./balanceComponent";
 import {
   hederLayout,
   rightSectionContainer,
-  balanceContainer,
   userContainer,
+  userCircle,
 } from "./index.css";
-
+import logo from "@/assets/icon/TheSandboxLogo.svg";
+import cart from "@/assets/icon/shopping-cart.svg";
 const Header = () => {
   return (
-    <div className={hederLayout}>
-      <div>ths SANDBOX</div>
+    <header className={hederLayout}>
+      <div>
+        <Image src={logo} alt="the sandbox logo" />
+      </div>
       <div className={rightSectionContainer}>
-        <div>localization</div>
+        <div>한국어</div>
         <BalanceContainer />
         <div className={userContainer}>
-          <div>프로필</div>
-          <div>장바구니</div>
+          <div className={userCircle}></div>
+          <Image src={cart} alt="cart" />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
