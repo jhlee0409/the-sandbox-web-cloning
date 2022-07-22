@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Home from "../src/home";
+import Home from "../src/components/home";
 
 const HomePage: NextPage = () => {
   return <Home />;

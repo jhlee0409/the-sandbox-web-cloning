@@ -17,10 +17,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <SideNav />
         <div
           style={{
-            maxHeight: "calc(100vh - 60px)",
+            minHeight: "calc(100vh - 60px)",
             overflowX: "hidden",
             height: "100%",
-            overflow: "scroll",
+            overflowY: "scroll",
             width: "100%",
           }}
         >
