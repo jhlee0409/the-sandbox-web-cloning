@@ -2,19 +2,20 @@ import Image from "next/image";
 import BalanceContainer from "./balanceComponent";
 import {
   headerLayout,
-  rightSectionContainer,
-  userContainer,
-  userCircle,
-  searchContainer,
-  searchBox,
-  searchInput,
   noneStyle,
+  rightSectionContainer,
+  searchBox,
+  searchContainer,
+  searchInput,
+  userCircle,
+  userContainer,
 } from "./index.css";
 import logo from "@/assets/icon/TheSandboxLogo.svg";
 import cart from "@/assets/icon/shopping-cart.svg";
 import search from "@/assets//icon/search.png";
 import { useRouter } from "next/router";
 import { useLayoutEffect, useState } from "react";
+
 const Header = () => {
   const [isShowSearch, setIsShowSearch] = useState(false);
   const router = useRouter();
