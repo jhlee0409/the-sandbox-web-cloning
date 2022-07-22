@@ -1,8 +1,8 @@
-import { style } from "@vanilla-extract/css";
-import { AlignCenter, flexBox } from "../../styles/style.css";
-import { vars } from "../../styles/vars.css";
+import { globalStyle, style } from "@vanilla-extract/css";
+import { AlignCenter, flexBox } from "@/styles/style.css";
+import { vars } from "@/styles/vars.css";
 
-export const hederLayout = style({
+export const headerLayout = style({
   position: "sticky",
   top: 0,
   padding: "0 20px",
@@ -28,7 +28,7 @@ export const userContainer = style([
   {
     borderLeft: "1px solid hsla(0,0%,100%,.2)",
     height: "100%",
-    padding: "0 20px",
+    paddingLeft: "10px",
   },
 ]);
 
@@ -55,4 +55,47 @@ export const userCircle = style({
     backgroundColor: "#00b0ff",
     borderRadius: 4,
   },
+});
+
+export const searchContainer = style({
+  width: "33%",
+  maxWidth: "360px",
+});
+
+export const noneStyle = style({
+  display: "none",
+});
+
+export const searchBox = style({
+  display: "flex",
+  alignItems: "center",
+  width: "70%",
+  height: "33px",
+  borderRadius: 5,
+  border: "1px solid hsla(0,0%,100%,.10196)",
+  backgroundColor: "hsla(0,0%,100%,.05098)",
+  transition: "all .3s ease",
+  padding: "0 10px",
+});
+
+export const searchInput = style({
+  backgroundColor: "transparent",
+  outline: "none",
+  border: "none",
+  margin: "0 20px 0 10px",
+  color: "white",
+  "::placeholder": {
+    opacity: 0.7,
+    transition: "opacity 150ms ease",
+  },
+  selectors: {
+    "&:focus::placeholder": { opacity: 1 },
+  },
+});
+globalStyle(`${searchBox} > span`, {
+  width: "15px !important",
+});
+
+globalStyle(`${searchBox} img`, {
+  filter: "invert(1)",
 });

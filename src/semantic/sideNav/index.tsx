@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SideNavLayout } from "./index.css";
+import { sideNavLayout, nav, selectedNav } from "./index.css";
 
 const navList = [
   { title: "홈", href: "/", icon: "" },
@@ -15,11 +15,13 @@ const navList = [
 ];
 const SideNav = () => {
   return (
-    <div className={SideNavLayout}>
+    <div className={sideNavLayout}>
       {navList.map((item, i) => {
         return (
-          <Link key={item.title + i} href={item.href}>
-            {item.title}
+          <Link key={item.title + i} href={item.href} passHref>
+            <div className={`${nav} ${i === 0 ? selectedNav : ""}`}>
+              <p>{item.title}</p>
+            </div>
           </Link>
         );
       })}
