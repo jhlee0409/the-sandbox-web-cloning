@@ -14,12 +14,12 @@ import logo from "@/assets/icon/TheSandboxLogo.svg";
 import cart from "@/assets/icon/shopping-cart.svg";
 import search from "@/assets//icon/search.png";
 import { useRouter } from "next/router";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const [isShowSearch, setIsShowSearch] = useState(false);
   const router = useRouter();
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (router.asPath.search("shop") !== -1) {
       setIsShowSearch(true);
     } else {

@@ -6,12 +6,6 @@ import "./../src/styles/global.css";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <link
-          href="http://fonts.cdnfonts.com/css/montserrat"
-          rel="stylesheet"
-        />
-      </Head>
       <Header />
       <div style={{ display: "flex" }}>
         <SideNav />
