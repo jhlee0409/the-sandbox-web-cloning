@@ -16,3 +16,7 @@ export const AlignCenter = style({
 export const JustifyCenter = style({
   justifyContent: "center",
 });
+
+export const SpaceBetweenRow = style({
+  justifyContent: "space-between",
+});

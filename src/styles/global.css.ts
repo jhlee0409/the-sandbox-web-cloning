@@ -9,11 +9,15 @@ globalStyle("body", {
   height: "100%",
   overflow: "hidden",
 });
-globalStyle("*", {
-  boxSizing: "border-box",
-});
 
 globalStyle("*", {
   padding: 0,
   margin: 0,
+  boxSizing: "border-box",
+});
+
+globalStyle("button", {
+  background: "none",
+  border: "none",
+  cursor: "pointer",
 });

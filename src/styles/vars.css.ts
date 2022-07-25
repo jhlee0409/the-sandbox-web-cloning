@@ -47,6 +47,7 @@ export const vars = createGlobalTheme(":root", {
     red: "red",
     point: "#caf1f8",
     yellow: "#ffbf36",
+    lightBlue: "#00b0ff",
   },
   borderRadius: {
     base: "12px",
